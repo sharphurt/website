@@ -1,0 +1,15 @@
+spring.jpa:
+  database: POSTGRESQL
+  hibernate.ddl-auto: create-drop
+  show-sql: true
+
+spring.datasource:
+  url: jdbc:postgresql://${CATSTACK_WEBSITE_HOST}:${CATSTACK_WEBSITE_PORT}/website
+  driverClassName: org.postgresql.Driver
+  username: ${CATSTACK_WEBSITE_USERNAME}
+  password: ${CATSTACK_WEBSITE_PASSWORD}
+
+spring.liquibase:
+  enabled: true
+  drop-first: false
+  change-log: classpath:db/changelog/changelog-master.xml
