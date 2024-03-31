@@ -1,0 +1,77 @@
+header {
+    display: flex;
+    gap: 16px;
+    position: relative;
+    margin-left: 52px;
+    margin-right: 52px;
+    z-index: 10;
+}
+
+header > * {
+    padding: 32px 48px;
+    background: var(--menu-bg);
+    border-radius: 32px;
+}
+
+.catstack-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.header-main-container {
+    display: flex;
+    justify-content: space-between;
+    flex: none;
+    flex-grow: 1;
+
+    flex: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+.header-main-container a {
+    color: var(--primary-text-inversion) !important;
+}
+
+.text-links-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.social-links-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    height: 24px;
+}
+
+.menu-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+}
+
+.header-button {
+    color: var(--primary-text-inversion);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in;
+}
+
+.header-button:hover {
+    background-color: var(--menu-bg-hover);
+    transition: background-color 0.15s ease-in;
+}

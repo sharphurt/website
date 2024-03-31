@@ -1,0 +1,80 @@
+:root {
+    --primary-text: #181818;
+    --primary-text-inversion: #FFFFFF;
+    --secondary-text: #C0C0C0;
+    --secondary-icon: #919090;
+    --secondary-text-inversion: #888888;
+    --teritary-text-inversionl: #4D4D4D;
+
+    --secondary-bg: #E6E6E6;
+    --secondary-bg-inversion: #292929;
+    --teritary-bg: #F7F7F7;
+
+    --panel-bg: #FFFFFF;
+    --panel-stroke: #EBEBEB;
+
+    --accent-text: #5C4FEB;
+
+    --menu-bg: #222222;
+    --menu-bg-hover: #2E2E2E;
+
+    --gradient: linear-gradient(120deg, rgb(92, 79, 235),rgb(73, 135, 255),rgb(61, 127, 255));
+}
+
+body, html {
+    margin: 0;
+    background-color: var(--teritary-bg);
+}
+
+body {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 16px 32px;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-text) !important;
+}
+
+.nav-button {
+    background-color: var(--panel-bg);
+    color: var(--accent-text);
+
+    padding: 24px 48px;
+    border-radius: 16px;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.nav-button p {
+    color: inherit;
+}
+
+.arrow-link {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.gradient {
+    background: linear-gradient(120deg, rgb(92, 79, 235),rgb(73, 135, 255),rgb(61, 127, 255));
+    background: -webkit-linear-gradient(120deg, rgb(92, 79, 235),rgb(73, 135, 255),rgb(61, 127, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.secondary-text {
+    color: var(--secondary-text) !important;
+}

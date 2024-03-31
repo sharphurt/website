@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Inter Tight';
+    font-weight: 600;
+    src: url('../fonts/InterTight-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    src: url('../fonts/Inter-Regular.ttf');
+}
+
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 500;
+    src: url('../fonts/Inter-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 600;
+    src: url('../fonts/Inter-SemiBold.ttf');
+}
+
+.text-h1 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 58px;
+    letter-spacing: -0.01em;
+    text-align: left;
+}
+
+.text-h2 {
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.text-t1 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+}
+
+.text-t2 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.04em;
+}
+
+.text-h1, .text-h2, .text-t1, .text-t2 {
+    color: var(--primary-text);
+}
