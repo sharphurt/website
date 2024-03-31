@@ -61,6 +61,19 @@
     letter-spacing: -0.04em;
 }
 
+.text-t3 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -0.04em;
+}
+
 .text-h1, .text-h2, .text-t1, .text-t2 {
     color: var(--primary-text);
+}
+
+.text-t3 {
+    color: #919090;
 }

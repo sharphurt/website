@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/index/header.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/css/index/lead-section.css}">
     <link rel="stylesheet" type="text/css" th:href="@{/css/index/news-section.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index/games-section.css}">
     <meta charset="UTF-8">
     <title>Catstack</title>
 </head>
@@ -89,45 +90,22 @@
         <p class="text-t1" th:text="#{greetings.what-we-doing}"></p>
     </div>
 </section>
+
 <section class="news-section">
-    <div class="section-header-wrapper">
-        <h1 class="text-h1" th:text="#{main.news-section}"></h1>
-        <button class="nav-button">
-            <p class="text-t2" th:text="#{main.news-section.all}"></p>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M12.4001 8.00001C12.4001 8.3682 12.1016 8.66667 11.7334 8.66667L4.26676 8.66667C3.89857 8.66667 3.6001 8.3682 3.6001 8.00001C3.6001 7.63182 3.89857 7.33334 4.26676 7.33334L11.7334 7.33334C12.1016 7.33334 12.4001 7.63182 12.4001 8.00001Z"
-                      fill="currentColor"/>
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M7.52869 12.2047C7.26834 11.9444 7.26834 11.5223 7.52869 11.2619L10.7906 8.00001L7.52869 4.73808C7.26835 4.47773 7.26835 4.05562 7.52869 3.79527C7.78904 3.53492 8.21115 3.53492 8.4715 3.79527L12.2048 7.5286C12.4652 7.78895 12.4652 8.21106 12.2048 8.47141L8.4715 12.2047C8.21115 12.4651 7.78904 12.4651 7.52869 12.2047Z"
-                      fill="currentColor"/>
-            </svg>
-        </button>
-    </div>
-
+    <div th:replace="~{fragments/blockHeader.html :: blockHeader(title=#{main.news-section}, buttonText=#{main.news-section.all}, link='/news')}"></div>
     <div class="news-cards-container">
-        <div class="news-card" th:each="item: ${news}" th:uuid="${item.getUuid()}">
-            <img class="news-card-image" th:src="${item.imageUrl}" width="400" height="320" th:alt="${item.imageAlt}">
-            <div class="news-card-text-block">
-                <div class="news-card-header-wrapper">
-                    <p class="text-t1 secondary-text" th:text="${item.publicationDate}"></p>
-                    <h2 class="text-h2" th:text="${item.header}"></h2>
-                    <h2 class="text-t1" th:text="${item.description}"></h2>
-                </div>
+        <th:block th:each="item: ${news}">
+            <div th:replace="~{fragments/newsCard.html :: newsCard(${item})}"></div>
+        </th:block>
+    </div>
+</section>
 
-                <a class="arrow-link text-t2" th:href="${item.newsUrl}">
-                    Читать полностью
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M12.4001 8.00001C12.4001 8.3682 12.1016 8.66667 11.7334 8.66667L4.26676 8.66667C3.89857 8.66667 3.6001 8.3682 3.6001 8.00001C3.6001 7.63182 3.89857 7.33334 4.26676 7.33334L11.7334 7.33334C12.1016 7.33334 12.4001 7.63182 12.4001 8.00001Z"
-                              fill="currentColor"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M7.52869 12.2047C7.26834 11.9444 7.26834 11.5223 7.52869 11.2619L10.7906 8.00001L7.52869 4.73808C7.26835 4.47773 7.26835 4.05562 7.52869 3.79527C7.78904 3.53492 8.21115 3.53492 8.4715 3.79527L12.2048 7.5286C12.4652 7.78895 12.4652 8.21106 12.2048 8.47141L8.4715 12.2047C8.21115 12.4651 7.78904 12.4651 7.52869 12.2047Z"
-                              fill="currentColor"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
+<section class="game-section">
+    <div th:replace="~{fragments/blockHeader.html :: blockHeader(title=#{main.games-section}, buttonText=#{main.games-section.all}, link='/games')}"></div>
+    <div class="game-cards-container">
+        <th:block th:each="item: ${games}">
+            <div th:replace="~{fragments/gamesCard.html :: gameCard(${item})}"></div>
+        </th:block>
     </div>
 </section>
 </body>
